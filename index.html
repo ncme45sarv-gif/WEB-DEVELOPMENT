@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiment 1 of the Web Designing Lab">
+    <title>Experiment 1 | Web Designing Lab</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            text-align: center;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 35px 15px;
+        }
+
+        nav {
+            background: #1e40af;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            padding: 18px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            main {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Web Designing Lab</h1>
+        <p>Experiment 1: Git and GitHub</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experiment">Experiment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About This Project</h2>
+            <p>
+                This website demonstrates the basics of GitHub,
+                version control, branching and web hosting.
+            </p>
+        </section>
+
+        <section id="experiment">
+            <h2>Experiment Objectives</h2>
+            <p>Create a repository, manage branches, merge changes
+               and publish a static website using GitHub Pages.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Student Project</h2>
+            <p>Subject Code: JCS 308/408</p>
+            <p>Technology Used: HTML and CSS</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Web Designing Lab | Experiment 1</p>
+    </footer>
+</body>
+</html>
