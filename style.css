@@ -1,0 +1,244 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #0b0b12;
+    --surface: #151521;
+    --purple: #a78bfa;
+    --text: #f5f3ff;
+    --muted: #b0adc3;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    border-bottom: 1px solid var(--border);
+    background: rgba(11, 11, 18, 0.92);
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.hero h1 span {
+    color: var(--purple);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--purple);
+}
+
+.hero {
+    min-height: 540px;
+    padding: 115px 9% 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at 75% 35%, rgba(139, 92, 246, 0.18), transparent 48%),
+        var(--background);
+}
+
+.tag {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.intro {
+    max-width: 600px;
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--purple);
+    color: #151020;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(167, 139, 250, 0.25);
+}
+
+.section {
+    padding: 85px 9%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.section > p:not(.tag) {
+    color: var(--muted);
+    max-width: 800px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 38px;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--purple);
+}
+
+.number {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.card h3,
+.step h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.card p,
+.step p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.procedure {
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.step {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.step > span {
+    display: grid;
+    place-items: center;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(167, 139, 250, 0.12);
+    color: var(--purple);
+    font-weight: 800;
+}
+
+.result {
+    text-align: center;
+}
+
+.result > p:not(.tag) {
+    margin: 0 auto 28px;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .navbar ul {
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 85px 6%;
+        min-height: 450px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    footer {
+        padding: 25px 6%;
+    }
+}
